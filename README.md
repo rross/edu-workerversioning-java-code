@@ -13,7 +13,6 @@ For the exercises, make sure to run `temporal server start-dev --ui-port 8080 --
 Directory Name                     | Exercise
 :--------------------------------- | :-------------------------------------------------------
 `exercises/worker-versioning`      | [Exercise 1](exercises/worker-versioning/README.md)
-`exercises/worker-controller`      | [Exercise 2](exercises/worker-controller/README.md)
 
 ## Reference
 
