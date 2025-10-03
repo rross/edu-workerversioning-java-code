@@ -81,8 +81,9 @@ the complete version in the `solution` subdirectory.
      worker_versioning_demo  2.0      unspecified     1 minute ago
      worker_versioning_demo  1.0      unspecified     7 minutes ago
    ```
-4. Now, if you were to kick off another Workflow, for example by running
-   `npm run workflow a101`, that Workflow would again be handled by the
+4. Kick off another Workflow, by running
+   `mvn clean compile exec:java -Dexec.mainClass="getversion.Starter" -Dexec.args="a101"`
+   That Workflow would again be handled by the
    "1.0" Worker, rather than using your updated code. This is because you
    configured this Worker's default versioning behavior to Pinned rather than
    auto-upgraded. To update the default version that new Workflows will run with
@@ -94,7 +95,7 @@ the complete version in the `solution` subdirectory.
        --deployment-name "worker_versioning_demo" \
        --build-id "2.0"
    ```
-5. Finally, after running this command, go ahead and run
+6. Finally, after running this command, go ahead and run
    `mvn clean compile exec:java -Dexec.mainClass="getversion.Starter" -Dexec.args="a101"`
    to kick off a new Workflow. It will be handled by
    your "2.0" Worker, and reflect your code changes, running the second Activity
